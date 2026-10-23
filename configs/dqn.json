@@ -1,0 +1,14 @@
+{
+  "parallel_envs": 32,
+  "learning_rate": 0.0002,
+  "batch_size": 128,
+  "replay_capacity": 100000,
+  "warmup_transitions": 4096,
+  "updates_per_vector_step": 4,
+  "target_update_optimizer_steps": 500,
+  "epsilon_end": 0.05,
+  "epsilon_decay_fraction": 0.6,
+  "gradient_clip": 10.0,
+  "alpha": 0.6,
+  "gamma": 1.0
+}
