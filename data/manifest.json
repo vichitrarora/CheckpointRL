@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "metric_contract": "checkpoint_metrics_1",
+  "files": {
+    "train.jsonl": {
+      "sha256": "b4a44b5ee99689afb3b70a06cdf62ecf153efaa48305d4232c72c5f5a7beff7a",
+      "worlds": 5184
+    },
+    "validation.jsonl": {
+      "sha256": "e2216695b5269e4eb23e22564b9acf4cfc32b2cc0bddc73e841bef574e72d87c",
+      "worlds": 486
+    },
+    "test.jsonl": {
+      "sha256": "c405e61baa908d18a53ddc54f5aae7c1a4f0e854d22a43c8cd527567e618980a",
+      "worlds": 1620
+    },
+    "ood_test.jsonl": {
+      "sha256": "5e202551dd195127db535a3156ac818fb0ce1bf379b65a6ba1578d2fa16e41b2",
+      "worlds": 810
+    }
+  }
+}
