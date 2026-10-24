@@ -1,0 +1,32 @@
+{
+  "metric_contract": "checkpoint_metrics_1",
+  "seeds": [
+    4401,
+    4402,
+    4403
+  ],
+  "decisions_per_fit": 2000000,
+  "validation_every": 200000,
+  "fractions": [
+    0.03125,
+    0.0625,
+    0.125,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "minimum_fraction_duration": 30.0,
+  "reward_scale": 10.0,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 717441,
+  "arms": {
+    "ppo": {
+      "algorithm": "ppo",
+      "augmented": true
+    },
+    "dqn": {
+      "algorithm": "dqn",
+      "augmented": false
+    }
+  }
+}
