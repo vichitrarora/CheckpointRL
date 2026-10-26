@@ -1,0 +1,177 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 7.005853800103068,
+      "log": "check01.log",
+      "log_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify"
+      ],
+      "exit_code": 0,
+      "seconds": 6.202792900148779,
+      "log": "check02.log",
+      "log_sha256": "842a781cef875e00a7a3fb41187b41d0145e6f94d82a65da4247fe519cd9ee1b"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 38.28402839996852,
+      "log": "check03.log",
+      "log_sha256": "ee7d4b4897f7477ae41c45b211d12ea6de78cf01b0eb137071161d0ba1c06c1f"
+    },
+    {
+      "command": [
+        "python",
+        "train.py",
+        "--agent",
+        "ppo",
+        "--smoke",
+        "--output",
+        "<CHECK_OUTPUT>\\ppo-smoke"
+      ],
+      "exit_code": 0,
+      "seconds": 8.764776800060645,
+      "log": "check04.log",
+      "log_sha256": "5dfce7015938be6adaf005de8e38fc3f340d2a7007db8f5f920109f4f1bad405"
+    },
+    {
+      "command": [
+        "python",
+        "train.py",
+        "--agent",
+        "dqn",
+        "--smoke",
+        "--output",
+        "<CHECK_OUTPUT>\\dqn-smoke"
+      ],
+      "exit_code": 0,
+      "seconds": 3.686754799913615,
+      "log": "check05.log",
+      "log_sha256": "51683241b151ecd72dfe07454ca327c8828bb234be867ce708ab2ba1843f8057"
+    },
+    {
+      "command": [
+        "python",
+        "evaluate.py",
+        "--selection",
+        "<CHECK_OUTPUT>\\ppo-smoke\\selection.json",
+        "--limit",
+        "81",
+        "--output",
+        "<CHECK_OUTPUT>\\ppo-smoke-evaluation"
+      ],
+      "exit_code": 0,
+      "seconds": 7.808053100015968,
+      "log": "check06.log",
+      "log_sha256": "09c6781eedb316646b80679adf2aee04f219789a38f6b67621388bd14a6f12d0"
+    },
+    {
+      "command": [
+        "python",
+        "evaluate.py",
+        "--selection",
+        "<CHECK_OUTPUT>\\dqn-smoke\\selection.json",
+        "--limit",
+        "81",
+        "--output",
+        "<CHECK_OUTPUT>\\dqn-smoke-evaluation"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8632085998542607,
+      "log": "check07.log",
+      "log_sha256": "300879f05cf09c7bc0a176b4fc02765a71db07c77acccf57dd2eeb1cd1db7fd2"
+    },
+    {
+      "command": [
+        "python",
+        "evaluate.py",
+        "--limit",
+        "81",
+        "--output",
+        "<CHECK_OUTPUT>\\evaluation-smoke"
+      ],
+      "exit_code": 0,
+      "seconds": 9.528713800013065,
+      "log": "check08.log",
+      "log_sha256": "fb8cf02e89e58d01541fa16da6e74837c3f5da11b76feeccd8a00520e6b01eb1"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.verify",
+        "--evaluation",
+        "<CHECK_OUTPUT>\\evaluation-smoke"
+      ],
+      "exit_code": 0,
+      "seconds": 6.268896199995652,
+      "log": "check09.log",
+      "log_sha256": "8eb5766ef2bd6cf7682544847821c378689334b71d6a1289373290b94ee9bd7f"
+    },
+    {
+      "command": [
+        "python",
+        "run_all.py",
+        "--output",
+        "<CHECK_OUTPUT>\\reproduction"
+      ],
+      "exit_code": 0,
+      "seconds": 70.7526028000284,
+      "log": "check10.log",
+      "log_sha256": "9ff8532a1308a114d582ad694630e726960fce1229da34adaef01e004657db86"
+    }
+  ],
+  "smoke_training": {
+    "ppo": {
+      "decisions": 512,
+      "optimizer_steps": 16,
+      "selected_model_sha256": "1e69c1a0bda4b67de20a25efc7eaaa69ea7a0889ba1916e30cd8a9ba146179f6",
+      "validation_worlds": 81
+    },
+    "dqn": {
+      "decisions": 8192,
+      "optimizer_steps": 516,
+      "selected_model_sha256": "ebb963c832dd422aa237e609d73954dbda77fc2efbd8a38d17d02a324c1352b6",
+      "validation_worlds": 81
+    }
+  },
+  "full_training_performed": false,
+  "runtime": {
+    "python": "3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "gymnasium": "1.4.0",
+    "stable-baselines3": "2.9.0",
+    "sb3-contrib": "2.9.0",
+    "matplotlib": "3.9.3"
+  },
+  "data_manifest_sha256": "15ec7d16b660b1add4fdec4eac2b747670a3b3cf0f64362079eff5be503f889c",
+  "model_manifest_sha256": "d5f835c30f3c5c9df3dde883011b338100c07c2b75adb838598748fbbdbb9a81",
+  "full_evaluation": {
+    "reference_runs": 21870,
+    "compared_runs": 21870,
+    "full_reproduction": true,
+    "float_rtol": 1e-10,
+    "float_atol": 1e-07
+  }
+}
