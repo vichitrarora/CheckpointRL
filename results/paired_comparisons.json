@@ -1,0 +1,142 @@
+[
+  {
+    "split": "ood_test",
+    "policy": "ppo",
+    "reference": "dqn",
+    "difference_excess_pp": -6.222695263933265,
+    "ci95_low_pp": -8.443141142929665,
+    "ci95_high_pp": -4.178186745025778,
+    "world_win_pct": 62.59259259259259,
+    "world_tie_pct": 11.11111111111111
+  },
+  {
+    "split": "ood_test",
+    "policy": "ppo",
+    "reference": "young",
+    "difference_excess_pp": -3.3826715458619336,
+    "ci95_low_pp": -6.24051630303767,
+    "ci95_high_pp": -0.8268954520925499,
+    "world_win_pct": 55.06172839506173,
+    "world_tie_pct": 8.518518518518519
+  },
+  {
+    "split": "ood_test",
+    "policy": "ppo",
+    "reference": "daly",
+    "difference_excess_pp": -4.0719611888475296,
+    "ci95_low_pp": -6.5897789286698165,
+    "ci95_high_pp": -1.8856553914153382,
+    "world_win_pct": 61.23456790123457,
+    "world_tie_pct": 6.296296296296296
+  },
+  {
+    "split": "ood_test",
+    "policy": "ppo",
+    "reference": "fixed1200",
+    "difference_excess_pp": -35.109776549297536,
+    "ci95_low_pp": -40.086737447622866,
+    "ci95_high_pp": -30.462695179267687,
+    "world_win_pct": 74.32098765432099,
+    "world_tie_pct": 0.12345679012345678
+  },
+  {
+    "split": "ood_test",
+    "policy": "dqn",
+    "reference": "young",
+    "difference_excess_pp": 2.840023718071331,
+    "ci95_low_pp": 0.21402921064552188,
+    "ci95_high_pp": 5.472490992406357,
+    "world_win_pct": 35.67901234567901,
+    "world_tie_pct": 7.28395061728395
+  },
+  {
+    "split": "ood_test",
+    "policy": "dqn",
+    "reference": "daly",
+    "difference_excess_pp": 2.1507340750857358,
+    "ci95_low_pp": -0.5557577403568307,
+    "ci95_high_pp": 5.001791913850685,
+    "world_win_pct": 41.48148148148148,
+    "world_tie_pct": 6.296296296296296
+  },
+  {
+    "split": "ood_test",
+    "policy": "dqn",
+    "reference": "fixed1200",
+    "difference_excess_pp": -28.887081285364275,
+    "ci95_low_pp": -33.392635063760906,
+    "ci95_high_pp": -24.2773052624577,
+    "world_win_pct": 64.07407407407408,
+    "world_tie_pct": 0.3703703703703704
+  },
+  {
+    "split": "test",
+    "policy": "ppo",
+    "reference": "dqn",
+    "difference_excess_pp": -1.8971542783030526,
+    "ci95_low_pp": -2.6787593470095024,
+    "ci95_high_pp": -1.1308109318020463,
+    "world_win_pct": 55.61728395061728,
+    "world_tie_pct": 15.06172839506173
+  },
+  {
+    "split": "test",
+    "policy": "ppo",
+    "reference": "young",
+    "difference_excess_pp": -2.391532948509117,
+    "ci95_low_pp": -3.3284425451687683,
+    "ci95_high_pp": -1.5003171781653721,
+    "world_win_pct": 51.91358024691358,
+    "world_tie_pct": 11.234567901234568
+  },
+  {
+    "split": "test",
+    "policy": "ppo",
+    "reference": "daly",
+    "difference_excess_pp": -2.088680391299179,
+    "ci95_low_pp": -2.9717681037035995,
+    "ci95_high_pp": -1.1652996051270434,
+    "world_win_pct": 54.13580246913581,
+    "world_tie_pct": 10.0
+  },
+  {
+    "split": "test",
+    "policy": "ppo",
+    "reference": "fixed1200",
+    "difference_excess_pp": -22.485089529273953,
+    "ci95_low_pp": -25.390533724793077,
+    "ci95_high_pp": -19.95614806127113,
+    "world_win_pct": 68.7037037037037,
+    "world_tie_pct": 0.5555555555555556
+  },
+  {
+    "split": "test",
+    "policy": "dqn",
+    "reference": "young",
+    "difference_excess_pp": -0.4943786702060639,
+    "ci95_low_pp": -1.4119465750683249,
+    "ci95_high_pp": 0.4254567338796777,
+    "world_win_pct": 40.123456790123456,
+    "world_tie_pct": 10.74074074074074
+  },
+  {
+    "split": "test",
+    "policy": "dqn",
+    "reference": "daly",
+    "difference_excess_pp": -0.1915261129961261,
+    "ci95_low_pp": -1.0717088056126423,
+    "ci95_high_pp": 0.6835298578658423,
+    "world_win_pct": 42.22222222222222,
+    "world_tie_pct": 9.506172839506172
+  },
+  {
+    "split": "test",
+    "policy": "dqn",
+    "reference": "fixed1200",
+    "difference_excess_pp": -20.587935250970897,
+    "ci95_low_pp": -23.182539476976572,
+    "ci95_high_pp": -18.23492766140635,
+    "world_win_pct": 62.53086419753087,
+    "world_tie_pct": 0.24691358024691357
+  }
+]
