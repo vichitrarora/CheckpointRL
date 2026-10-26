@@ -1,0 +1,224 @@
+[
+  {
+    "owner": "vichitr",
+    "date": "2026-10-23T09:00:00+05:30",
+    "message": "Set up dependencies shared runtime and environment configuration",
+    "files": [
+      ".gitattributes",
+      ".gitignore",
+      "agents/__init__.py",
+      "checkpoint_rl/__init__.py",
+      "checkpoint_rl/runtime.py",
+      "configs/environment.json",
+      "requirements-lock.txt",
+      "requirements.txt"
+    ]
+  },
+  {
+    "owner": "jaineel",
+    "date": "2026-10-23T11:00:00+05:30",
+    "message": "Integrate checkpoint environment and Gymnasium rollout interface",
+    "files": [
+      "checkpoint_rl/core.py",
+      "checkpoint_rl/environment.py",
+      "checkpoint_rl/rollout.py"
+    ]
+  },
+  {
+    "owner": "vichitr",
+    "date": "2026-10-23T14:00:00+05:30",
+    "message": "Implement Double DQN replay optimizer and training loop",
+    "files": [
+      "agents/dqn.py",
+      "agents/train_dqn.py",
+      "configs/dqn.json"
+    ]
+  },
+  {
+    "owner": "jaineel",
+    "date": "2026-10-23T16:00:00+05:30",
+    "message": "Implement masked PPO training and inference",
+    "files": [
+      "agents/ppo.py",
+      "agents/train_ppo.py",
+      "configs/ppo.json"
+    ]
+  },
+  {
+    "owner": "vichitr",
+    "date": "2026-10-24T09:00:00+05:30",
+    "message": "Add benchmark data splits and field documentation",
+    "files": [
+      "data/README.md",
+      "data/manifest.json",
+      "data/ood_test.jsonl",
+      "data/test.jsonl",
+      "data/train.jsonl",
+      "data/validation.jsonl"
+    ]
+  },
+  {
+    "owner": "jaineel",
+    "date": "2026-10-24T11:00:00+05:30",
+    "message": "Integrate shared training CLI validation selection and model loading",
+    "files": [
+      "agents/actors.py",
+      "agents/training.py",
+      "configs/training.json",
+      "models/manifest.json",
+      "train.py"
+    ]
+  },
+  {
+    "owner": "vichitr",
+    "date": "2026-10-24T14:00:00+05:30",
+    "message": "Add trained DQN agents learning diagnostics and evaluation records",
+    "files": [
+      "models/dqn/seed4401.npz",
+      "models/dqn/seed4402.npz",
+      "models/dqn/seed4403.npz",
+      "results/learning_curves/dqn_seed4401.json",
+      "results/learning_curves/dqn_seed4402.json",
+      "results/learning_curves/dqn_seed4403.json",
+      "results/reference/ood_test_dqn_seed4401.jsonl",
+      "results/reference/ood_test_dqn_seed4402.jsonl",
+      "results/reference/ood_test_dqn_seed4403.jsonl",
+      "results/reference/test_dqn_seed4401.jsonl",
+      "results/reference/test_dqn_seed4402.jsonl",
+      "results/reference/test_dqn_seed4403.jsonl"
+    ]
+  },
+  {
+    "owner": "jaineel",
+    "date": "2026-10-24T16:00:00+05:30",
+    "message": "Add trained PPO agents learning diagnostics and evaluation records",
+    "files": [
+      "models/ppo/seed4401.zip",
+      "models/ppo/seed4402.zip",
+      "models/ppo/seed4403.zip",
+      "results/learning_curves/ppo_seed4401.json",
+      "results/learning_curves/ppo_seed4402.json",
+      "results/learning_curves/ppo_seed4403.json",
+      "results/reference/ood_test_ppo_seed4401.jsonl",
+      "results/reference/ood_test_ppo_seed4402.jsonl",
+      "results/reference/ood_test_ppo_seed4403.jsonl",
+      "results/reference/test_ppo_seed4401.jsonl",
+      "results/reference/test_ppo_seed4402.jsonl",
+      "results/reference/test_ppo_seed4403.jsonl",
+      "results/training_runtime.json"
+    ]
+  },
+  {
+    "owner": "vichitr",
+    "date": "2026-10-25T09:00:00+05:30",
+    "message": "Verify DQN targets action support and environment accounting",
+    "files": [
+      "tests/__init__.py",
+      "tests/test_dqn.py",
+      "tests/test_environment.py",
+      "tests/test_support.py"
+    ]
+  },
+  {
+    "owner": "jaineel",
+    "date": "2026-10-25T11:00:00+05:30",
+    "message": "Verify PPO masks checkpoint loading and training startup",
+    "files": [
+      "scripts/check_readme.py",
+      "tests/test_agents.py",
+      "tests/test_ppo.py"
+    ]
+  },
+  {
+    "owner": "vichitr",
+    "date": "2026-10-25T14:00:00+05:30",
+    "message": "Define metrics and add result aggregation and reporting tests",
+    "files": [
+      "METRICS.md",
+      "checkpoint_rl/metrics.py",
+      "report.py",
+      "results/all_metrics.csv",
+      "results/all_metrics.json",
+      "results/cell_metrics.csv",
+      "results/cell_metrics.json",
+      "results/individual_seeds.csv",
+      "results/individual_seeds.json",
+      "results/report_manifest.json",
+      "results/stratum_metrics.csv",
+      "results/stratum_metrics.json",
+      "results/timeouts.json",
+      "tests/test_reporting.py"
+    ]
+  },
+  {
+    "owner": "jaineel",
+    "date": "2026-10-25T16:00:00+05:30",
+    "message": "Integrate baseline evaluation and reference verification",
+    "files": [
+      "baselines/__init__.py",
+      "baselines/policies.py",
+      "evaluate.py",
+      "results/reference/manifest.json",
+      "results/reference/ood_test_daly_seed0.jsonl",
+      "results/reference/ood_test_fixed1200_seed0.jsonl",
+      "results/reference/ood_test_young_seed0.jsonl",
+      "results/reference/test_daly_seed0.jsonl",
+      "results/reference/test_fixed1200_seed0.jsonl",
+      "results/reference/test_young_seed0.jsonl",
+      "run_all.py",
+      "scripts/__init__.py",
+      "scripts/verify.py"
+    ]
+  },
+  {
+    "owner": "vichitr",
+    "date": "2026-10-26T09:00:00+05:30",
+    "message": "Add paired comparisons and benchmark visualization",
+    "files": [
+      "figures/cost_breakdown.pdf",
+      "figures/cost_breakdown.png",
+      "figures/learning_curves.pdf",
+      "figures/learning_curves.png",
+      "figures/overhead.pdf",
+      "figures/overhead.png",
+      "figures/paired_comparisons.pdf",
+      "figures/paired_comparisons.png",
+      "figures/tail_risk.pdf",
+      "figures/tail_risk.png",
+      "plots/__init__.py",
+      "plots/make_plots.py",
+      "results/paired_comparisons.csv",
+      "results/paired_comparisons.json"
+    ]
+  },
+  {
+    "owner": "jaineel",
+    "date": "2026-10-26T11:00:00+05:30",
+    "message": "Document selected methods and verified reproduction results",
+    "files": [
+      "METHODS.md",
+      "results/REPRODUCTION.md",
+      "results/RESULTS.md",
+      "results/reproduction_checks.json"
+    ]
+  },
+  {
+    "owner": "vichitr",
+    "date": "2026-10-26T14:00:00+05:30",
+    "message": "Add coordinated publication tooling and DQN contributor workflow",
+    "files": [
+      "scripts/commit_plan.json",
+      "scripts/publish_history.py",
+      "scripts/publish_vichitr.ps1"
+    ]
+  },
+  {
+    "owner": "jaineel",
+    "date": "2026-10-26T16:00:00+05:30",
+    "message": "Finalize runnable README and PPO contributor workflow",
+    "files": [
+      "README.md",
+      "scripts/publish_jaineel.ps1"
+    ]
+  }
+]
